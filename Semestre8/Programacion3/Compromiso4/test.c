@@ -7,9 +7,6 @@
 
 #define EOF 0
 
-/**
-* Prototipos de funcion
-**/
 extern int yylex (void);
 extern char* yytext;
 extern int tokenCount;
@@ -37,38 +34,146 @@ int main(int argc, char* argv[])
 
 char* getTokenLabel(int tokenCode)
 {
-	printf("%d\n",tokenCode);
 	switch (tokenCode)
 	{
-	case _PROGRAM:
-		return "Program";
-		break;
-	
-	default:
-		return "UNKNOW";
-		break;
+		case _ID:
+			return "ID";
+			break;
+		case _ICONST:
+			return "ICONST";
+			break;
+		case _RCONST:
+			return "RCONST";
+			break;
+		case _COMMENT:
+			return "COMMENT";
+			break;
+		case _ECONST:
+			return "ECONST";
+			break;
+		case _LITERAL:
+			return "LITERAL";
+			break;
+		case _LBRACK:
+			return "LBRACK";
+			break;
+		case _RBRACK:
+			return "RBRACK";
+			break;
+		case _LPAREN:
+			return "LPAREN";
+			break;
+		case _RPAREN:
+			return "RPAREN";
+			break;
+		case _SEMI:
+			return "SEMI";
+			break;
+		case _COLON:
+			return "COLON";
+			break;
+		case _COMMA:
+			return "COMMA";
+			break;
+		case _ASSIGN:
+			return "ASSIGN";
+			break;
+		case _PLUS:
+			return "PLUS";
+			break;
+		case _MINUS:
+			return "MINUS";
+			break;
+		case _MULT:
+			return "MULT";
+			break;
+		case _DIVIDE:
+			return "DIVIDE";
+			break;
+		case _EQL:
+			return "EQUAL";
+			break;
+		case _LESS:
+			return "LESS";
+			break;
+		case _GTR:
+			return "GREATER";
+			break;
+		case _LEQ:
+			return "LESSEQUAL";
+			break;
+		case _GEQ:
+			return "GREATEQUAL";
+			break;
+		case _NEQ:
+			return "NOEQUAL";
+			break;
+		case _PROGRAM:
+			return "PROGRAM";
+			break;
+		case _ENDVARS:
+			return "ENDVARIABLES";
+			break;
+		case _ENDPROCS:
+			return "ENDPROCEDURES";
+			break;
+		case _VARS:
+			return "VARIABLES";
+			break;
+		case _NOVARS:
+			return "NOVARIABLES";
+			break;
+		case _INTEGER:
+			return "INTEGER";
+			break;
+		case _REAL:
+			return "REAL";
+			break;
+		case _STRING:
+			return "STRING";
+			break;
+		case _PROCS:
+			return "PROCEDURES";
+			break;
+		case _NOPROCS:
+			return "NOPROCEDURES";
+			break;
+		case _PROC:
+			return "PROCEDURE";
+			break;
+		case _BEGIN:
+			return "BEGIN";
+			break;
+		case _END:
+			return "END";
+			break;
+		case _FOR:
+			return "FOR";
+			break;
+		case _TO:
+			return "TO";
+			break;
+		case _DO:
+			return "DO";
+			break;
+		case _IF:
+			return "IF";
+			break;
+		case _THEN:
+			return "THEN";
+			break;
+		case _ELSE:
+			return "ELSE";
+			break;
+		case _READ:
+			return "READ";
+			break;
+		case _WRITE:
+			return "WRITE";
+			break;
+
+		default:
+			return "UNKNOW";
+			break;
 	}	
 }
-
-/*
-{PROGRAM}       											{return	(_PROGRAM); }
-("e"|"E")("n"|"N")("d"|"D")("v"|"V")("a"|"A")("r"|"R")("s"|"S")        											{return	(_ENDVARS); }
-("e"|"E")("n"|"N")("d"|"D")("p"|"P")("r"|"R")("o"|"O")("c"|"C")("s"|"S")        								{return	(_ENDPROCS); }
-("v"|"V")("a"|"A")("r"|"R")("i"|"I")("a"|"A")("b"|"B")("l"|"L")("e"|"E")("s"|"S")       						{return	(_VARS); }
-("n"|"N")("o"|"O")("v"|"V")("a"|"A")("r"|"R")("i"|"I")("a"|"A")("b"|"B")("l"|"L")("e"|"E")("s"|"S")        		{return	(_NOVARS); }
-("i"|"I")("n"|"N")("t"|"T")("e"|"E")("g"|"G")("e"|"E")("r"|"R")        											{return	(_INTEGER); }
-("r"|"R")("e"|"E")("a"|"A")("l"|"L")        																	{return	(_REAL); }
-("s"|"S")("t"|"T")("r"|"R")("i"|"I")("n"|"N")("g"|"G")        													{return	(_STRING); }
-("p"|"P")("r"|"R")("o"|"O")("c"|"C")("e"|"E")("d"|"D")("u"|"U")("r"|"R")("e"|"E")("s"|"S")        				{return	(_PROCS); }
-("n"|"N")("o"|"O")("p"|"P")("r"|"R")("o"|"O")("c"|"C")("e"|"E")("d"|"D")("u"|"U")("r"|"R")("e"|"E")("s"|"S")	{return	(_NOPROCS); }
-("p"|"P")("r"|"R")("o"|"O")("c"|"C")("e"|"E")("d"|"D")("u"|"U")("r"|"R")("e"|"E")        						{return	(_PROC); }
-("b"|"B")("e"|"E")("g"|"G")("i"|"I")("n"|"N")        															{return	(_BEGIN); }
-("e"|"E")("n"|"N")("d"|"D")         				 															{return	(_END); }
-("f"|"F")("o"|"O")("r"|"R")         				 															{return	(_FOR); }
-("t"|"T")("o"|"O")        		 					 															{return	(_TO); }
-("d"|"D")("o"|"O")        							 															{return	(_DO); }
-("i"|"I")("f"|"F")        							 															{return	(_IF); }
-("t"|"T")("h"|"H")("e"|"E")("n"|"N")        		 															{return	(_THEN); }
-("e"|"E")("l"|"L")("s"|"S")("e"|"E")        		 															{return	(_ELSE); }
-("r"|"R")("e"|"E")("a"|"A")("d"|"D")        		 															{return	(_READ); }
-("w"|"W")("r"|"R")("i"|"I")("t"|"T")("e"|"E")        															{return	(_WRITE); }*/

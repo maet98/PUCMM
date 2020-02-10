@@ -1,0 +1,66 @@
+{This is a test for the lexer program}
+ 
+
+Program TestProg
+
+Variables
+	_IntVar  : Integer
+	_RealVar : Real
+	_StrVar  : String
+	_LooIndex : Integer
+EndVars
+
+Procedures
+	Procedure Start ()
+	
+	For LoopIndex := 1 to IntVar Do
+
+	Begin
+		Do_One()
+		Do_Two()
+		Do_Three()
+
+	End
+
+	
+	Procedure Do_One()
+	
+	Begin	
+
+		Read("Type Your Name : ", StrVar)
+		Write("This is Your First Hello Wordl in YAL, " + StrVar + "!")
+	End
+	
+
+	Procedure Do_Two()
+	
+	Begin
+		
+		IntVar  := 122345
+		RealVar := 12345.3234
+		RealVar := 2.4567E12
+
+	End
+
+	Procedure Do_Three()
+
+	Begin
+		If IntVar > 0 Then 		
+			Write ("The Integer variable  has been assigned, its value is : " + IntVar)
+		Else 
+			Write ("The Integer variable has not been assigned")
+		
+		If RealVar > 0 Then 
+			Write ("The Real variable has been initialized, its value is : " + RealVar)
+		Else
+			Write ("The real variable has bot been initialized.")
+
+		If StrVar <> "" Then 
+			Write ("The string variable has been initialized, its value is : " + StrVar)
+
+		Else 
+			Write ("The string variable has not been initialized")
+				
+	End
+	
+EndProcs
