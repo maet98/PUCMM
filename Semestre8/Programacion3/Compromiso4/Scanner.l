@@ -11,13 +11,13 @@ int tokenCount;
 %}
 
 %%
-"{"[^}]*																										{printf("Comentario ilimitado.\n"); exit(1);}
+"{"[^}\n]*																										{printf("Comentario ilimitado.\n"); exit(1);}
 "{"[^}]*"}"																										{tokenCount++; return (_COMMENT);}
-["][^"]																											{printf("String ilimitado.\n"); exit(1);}
-["][^"]["]																										{tokenCount++; return (_LITERAL);}
+["][^"]*																											{printf("String ilimitado.\n"); exit(1);}
+["][^"]*["]																										{tokenCount++; return (_LITERAL);}
+{D}+("."1{D}+)?[eE]"-"?{D}+																						{tokenCount++; return (_ECONST);}
 ([-+]?[1-9]{D})|"0"																								{tokenCount++; return (_ICONST); }
 {D}+"."{D}+																										{tokenCount++; return (_RCONST); }
-{D}+("."{D}+)?"E""-"?{D}+																						{tokenCount++; return (_ECONST);}
 "["																												{tokenCount++; return (_LBRACK);}
 "]"																												{tokenCount++; return (_RBRACK);}
 "("																												{tokenCount++; return (_LPAREN);}

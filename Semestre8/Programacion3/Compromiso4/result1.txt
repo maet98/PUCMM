@@ -1,0 +1,198 @@
+El lexema detectado '{This is a test for the lexer program}' pertence al token COMMENT
+
+
+
+El lexema detectado 'Program' pertence al token PROGRAM
+El lexema detectado 'TestProg' pertence al token ID
+
+
+El lexema detectado 'Variables' pertence al token VARIABLES
+
+El lexema detectado '_IntVar' pertence al token ID
+El lexema detectado ':' pertence al token COLON
+El lexema detectado 'Integer' pertence al token INTEGER
+
+El lexema detectado '_RealVar' pertence al token ID
+El lexema detectado ':' pertence al token COLON
+El lexema detectado 'Real' pertence al token REAL
+
+El lexema detectado '_StrVar' pertence al token ID
+El lexema detectado ':' pertence al token COLON
+El lexema detectado 'String' pertence al token STRING
+
+El lexema detectado '_LooIndex' pertence al token ID
+El lexema detectado ':' pertence al token COLON
+El lexema detectado 'Integer' pertence al token INTEGER
+
+El lexema detectado 'EndVars' pertence al token ENDVARIABLES
+
+
+El lexema detectado 'Procedures' pertence al token PROCEDURES
+
+El lexema detectado 'Procedure' pertence al token PROCEDURE
+El lexema detectado 'Start' pertence al token ID
+El lexema detectado '(' pertence al token LPAREN
+El lexema detectado ')' pertence al token RPAREN
+
+
+El lexema detectado 'For' pertence al token FOR
+El lexema detectado 'LoopIndex' pertence al token ID
+El lexema detectado ':=' pertence al token ASSIGN
+El lexema detectado 'to' pertence al token TO
+El lexema detectado 'IntVar' pertence al token ID
+El lexema detectado 'Do' pertence al token DO
+
+
+El lexema detectado 'Begin' pertence al token BEGIN
+
+El lexema detectado 'Do_One' pertence al token ID
+El lexema detectado '(' pertence al token LPAREN
+El lexema detectado ')' pertence al token RPAREN
+
+El lexema detectado 'Do_Two' pertence al token ID
+El lexema detectado '(' pertence al token LPAREN
+El lexema detectado ')' pertence al token RPAREN
+
+El lexema detectado 'Do_Three' pertence al token ID
+El lexema detectado '(' pertence al token LPAREN
+El lexema detectado ')' pertence al token RPAREN
+
+
+El lexema detectado 'End' pertence al token END
+
+
+
+El lexema detectado 'Procedure' pertence al token PROCEDURE
+El lexema detectado 'Do_One' pertence al token ID
+El lexema detectado '(' pertence al token LPAREN
+El lexema detectado ')' pertence al token RPAREN
+
+
+El lexema detectado 'Begin' pertence al token BEGIN
+
+
+El lexema detectado 'Read' pertence al token READ
+El lexema detectado '(' pertence al token LPAREN
+El lexema detectado '"Type Your Name : "' pertence al token LITERAL
+El lexema detectado ',' pertence al token COMMA
+El lexema detectado 'StrVar' pertence al token ID
+El lexema detectado ')' pertence al token RPAREN
+
+El lexema detectado 'Write' pertence al token WRITE
+El lexema detectado '(' pertence al token LPAREN
+El lexema detectado '"This is Your First Hello Wordl in YAL, "' pertence al token LITERAL
+El lexema detectado '+' pertence al token PLUS
+El lexema detectado 'StrVar' pertence al token ID
+El lexema detectado '+' pertence al token PLUS
+El lexema detectado '"!"' pertence al token LITERAL
+El lexema detectado ')' pertence al token RPAREN
+
+El lexema detectado 'End' pertence al token END
+
+
+
+El lexema detectado 'Procedure' pertence al token PROCEDURE
+El lexema detectado 'Do_Two' pertence al token ID
+El lexema detectado '(' pertence al token LPAREN
+El lexema detectado ')' pertence al token RPAREN
+
+
+El lexema detectado 'Begin' pertence al token BEGIN
+
+
+El lexema detectado 'IntVar' pertence al token ID
+El lexema detectado ':=' pertence al token ASSIGN
+El lexema detectado '12' pertence al token ICONST
+El lexema detectado '23' pertence al token ICONST
+El lexema detectado '45' pertence al token ICONST
+
+El lexema detectado 'RealVar' pertence al token ID
+El lexema detectado ':=' pertence al token ASSIGN
+El lexema detectado '12345.3234' pertence al token RCONST
+
+El lexema detectado 'RealVar' pertence al token ID
+El lexema detectado ':=' pertence al token ASSIGN
+El lexema detectado '2.4567' pertence al token RCONST
+El lexema detectado 'E12' pertence al token ID
+
+
+El lexema detectado 'End' pertence al token END
+
+
+El lexema detectado 'Procedure' pertence al token PROCEDURE
+El lexema detectado 'Do_Three' pertence al token ID
+El lexema detectado '(' pertence al token LPAREN
+El lexema detectado ')' pertence al token RPAREN
+
+
+El lexema detectado 'Begin' pertence al token BEGIN
+
+El lexema detectado 'If' pertence al token IF
+El lexema detectado 'IntVar' pertence al token ID
+El lexema detectado '>' pertence al token GREATER
+El lexema detectado '0' pertence al token ICONST
+El lexema detectado 'Then' pertence al token THEN
+
+El lexema detectado 'Write' pertence al token WRITE
+El lexema detectado '(' pertence al token LPAREN
+El lexema detectado '"The Integer variable  has been assigned, its value is : "' pertence al token LITERAL
+El lexema detectado '+' pertence al token PLUS
+El lexema detectado 'IntVar' pertence al token ID
+El lexema detectado ')' pertence al token RPAREN
+
+El lexema detectado 'Else' pertence al token ELSE
+
+El lexema detectado 'Write' pertence al token WRITE
+El lexema detectado '(' pertence al token LPAREN
+El lexema detectado '"The Integer variable has not been assigned"' pertence al token LITERAL
+El lexema detectado ')' pertence al token RPAREN
+
+
+El lexema detectado 'If' pertence al token IF
+El lexema detectado 'RealVar' pertence al token ID
+El lexema detectado '>' pertence al token GREATER
+El lexema detectado '0' pertence al token ICONST
+El lexema detectado 'Then' pertence al token THEN
+
+El lexema detectado 'Write' pertence al token WRITE
+El lexema detectado '(' pertence al token LPAREN
+El lexema detectado '"The Real variable has been initialized, its value is : "' pertence al token LITERAL
+El lexema detectado '+' pertence al token PLUS
+El lexema detectado 'RealVar' pertence al token ID
+El lexema detectado ')' pertence al token RPAREN
+
+El lexema detectado 'Else' pertence al token ELSE
+
+El lexema detectado 'Write' pertence al token WRITE
+El lexema detectado '(' pertence al token LPAREN
+El lexema detectado '"The real variable has bot been initialized."' pertence al token LITERAL
+El lexema detectado ')' pertence al token RPAREN
+
+
+El lexema detectado 'If' pertence al token IF
+El lexema detectado 'StrVar' pertence al token ID
+El lexema detectado '<>' pertence al token NOEQUAL
+El lexema detectado '""' pertence al token LITERAL
+El lexema detectado 'Then' pertence al token THEN
+
+El lexema detectado 'Write' pertence al token WRITE
+El lexema detectado '(' pertence al token LPAREN
+El lexema detectado '"The string variable has been initialized, its value is : "' pertence al token LITERAL
+El lexema detectado '+' pertence al token PLUS
+El lexema detectado 'StrVar' pertence al token ID
+El lexema detectado ')' pertence al token RPAREN
+
+
+El lexema detectado 'Else' pertence al token ELSE
+
+El lexema detectado 'Write' pertence al token WRITE
+El lexema detectado '(' pertence al token LPAREN
+El lexema detectado '"The string variable has not been initialized"' pertence al token LITERAL
+El lexema detectado ')' pertence al token RPAREN
+
+
+El lexema detectado 'End' pertence al token END
+
+
+El lexema detectado 'EndProcs' pertence al token ENDPROCEDURES
+El analizador ha detectado un total de 132 lexemas
