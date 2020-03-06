@@ -1,0 +1,7 @@
+Componentes,Descripción
+/pintos/src/tests/threads/hellopintos.c,"En este fichero se define el test de un hola mundo para ser ejecutado en pintos. Una vez ejecutado este test se produce el output “Hello, pintos” sin las comillas."
+/pintos/src/tests /threads/tests.c,En este fichero se encuentran una serie de tests que serán ejecutados dependiendo de los parámetros que sean enviados cuando se ejecute la sentencia “pintos – run [test]”
+/pintos/src/tests/threads/tests.h,En este fichero se encuentran los prototipos de las funciones que son consideradas tests.
+/pintos/src/threads/init.c,"Aquí inicia el kernel de PintOS, y a través de este archivo es que son recibidos los parámetros que darán lugar al programa que será ejecutado una vez el Sistema Operativo suba."
+/pintos/src/threads/thread.c,Este archivo se encarga de crear el thread que aloja el programa que se ejecutará (especificado en el comando que da inicio a PintOS).
+/pintos/src/tests/threads/make.tests,Archivo en el que se definen los pasos para compilar el archivo hellopintos.c

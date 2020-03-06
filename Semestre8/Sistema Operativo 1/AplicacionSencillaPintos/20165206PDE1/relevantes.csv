@@ -1,0 +1,7 @@
+"Componente","Descripción"
+"src/threads/init.c","Componente que sirve para la inicialización de alto nivel del kernel, contiene la función main() que consiste principalmente en llamadas a funciones de inicialización de otros módulos Pintos."
+"src/test/threads/test.h","Declaración de las funciones disponibles en src/test/threads"
+"src/test/threads/test.c","Componente cuya funcionalidad es ejecutar el test que se escoge además de definir un struct para su uso externo."
+"src/threads/thread.c","Implementa varias funciones públicas para el soporte de threads."
+"src/test/threads/hellopintos.c","Archivo .c que contiene la función implementada que imprime  'Hello, pintos'."
+"src/test/threads/make.tests","Archivo Make que sirve para compilar los test de ese mismo directorio"
