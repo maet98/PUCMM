@@ -11,6 +11,7 @@ Para la implementacion del comando _rm_ se utilizo la interfaz filesys para el m
 ```shell
 pintos −mkdisk filesys.dsk −−filesys −size = 2
 pintos −f −q
+
 ```
 
 Lo que hacen es primero crear un disco simulado “filesys.dsk” de 2 MB y a continuación se formatea. Una vez que el disco de pintos está listo para manejar los archivos se procedió a la implementación del comando  rm .
@@ -23,7 +24,7 @@ Las opciones −−help, −−version siguen su comportamiento natural e imprim
 
 La implementación de éste comando se hizo en el archivo  rm.c,  cuya función principal es  rmProc. El flujo de ejecución de la misma es el siguiente, se clasifican los token que comienzan con '-', y los otros se guardan en un arreglo ya que esto son clasificados como nombre de archivos. Al finalizar de analizar todos los token, se itera sobre el arreglo que contiene los nombres de los archivos y llamando la funcion filesys_remove son removidos.
 
-La documentación se encuentra en: html/rm_8c.html
+La documentación se encuentra en: html/threads_2rm_8c.html
 
 
 
