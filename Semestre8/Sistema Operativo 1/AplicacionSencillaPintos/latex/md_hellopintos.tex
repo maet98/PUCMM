@@ -1,0 +1,54 @@
+El siguiente proyecto consiste en desarrollar una aplicación en pintos que imprime\+: {\itshape Hello, pintos} en consola. A continuación se presenta una tabla con las componentes relevantes para el proyecto\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Componente }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Descripción  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Componente }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Descripción  }\\\cline{1-2}
+\endhead
+src/threads/init.\+c &Componente que sirve para la inicializacion de alto nivel del kernel, contiene la función main() que consiste principalmente en llamadas a funciones de inicializacion de otros módulos Pintos.  \\\cline{1-2}
+src/test/threads/test.\+h &Declaración de las funciones disponibles en src/test/threads  \\\cline{1-2}
+src/test/threads/test.\+c &Componente cuya funcionalidad es ejecutar el test que se escoge ademas de definir un struct para su uso externo.  \\\cline{1-2}
+src/test/threads/hellopintos.\+c &Archivo .c que contiene la función implementada que imprime \textquotesingle{}Hello pintos\textquotesingle{}.  \\\cline{1-2}
+src/threads/thread.\+c &Implementa varias funciones publicas para el soporte de threads.  \\\cline{1-2}
+src/test/threads/make.\+tests &Archivo Make que sirve para compilar los test de ese mismo directorio.  \\\cline{1-2}
+\end{longtabu}
+
+
+En el siguiente grafo se puede observar las dependencias de la componentes relevantes para el desarrollo de la aplicación
+
+\hypertarget{md_hellopintos_autotoc_md1}{}\doxysubsubsection{Locus para el desarrollo de la aplicación solicitada}\label{md_hellopintos_autotoc_md1}
+Para el desarrollo de la aplicación se uso el siguiente Locus\+:
+
+\begin{center}(\$\+H\+O\+ME)/\+P\+I\+N\+T\+O\+S-\/\+Ubuntu/pintos/src/tests/threads/\end{center} 
+
+Se uso este locus ya que aquí se encuentran varios archivos de test lo cuales se pueden correr con pintos al especificar el alias que se le ha sido asignado, a la hora de ejecutar pintos.\hypertarget{md_hellopintos_autotoc_md2}{}\doxysubsubsection{Producción de ejecutable y documentación}\label{md_hellopintos_autotoc_md2}
+Para producir el ejecutable de la aplicación se necesita situar en el directorio {\itshape src/threads/} una vez localizados en este directorio basta con escribir en la consola\+:
+
+\begin{center}make clean; make all\end{center} 
+
+Lo cual invocara al makefile y tendrá listo pintos para su ejecución, y para ejecutar la aplicación en el mismo directorios se escribe en la consola\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{pintos -\/-\/ run hello-\/pintos}
+\end{DoxyCode}
+
+
+Para producir la documentación debemos usar el archivo {\itshape Doxypintos.\+doxyfile} y localizarlo en el mismo directorio en que se encuentra \+\_\+/src\+\_\+ (\+\_\+/pintos\+\_\+) y con el generador doxygen simplemente se escribe\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{doxygen Doxypintos.doxyfile}
+\end{DoxyCode}
+
+
+Esto creara un directorio {\itshape doc}, donde se encontrara toda la documentación del proyecto pintos con la aplicación hello-\/pintos.
+
+Por ultimo, aquí esta la captura de pantalla del programa en ejecución.
+
+ 

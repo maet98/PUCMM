@@ -1,0 +1,6 @@
+ejer1.pdf: archivo que contiene las respuesta al ejercicio 1
+ejer2: carpeta con las respuestas al ejercicio2
+    ejer2.md: representacion del xml de la tabla
+    ejer2.xml: archivo xml de la tabla
+    ejer2.cpp: codigo de c++ que recibe un numero de evaluacion y da los detalles sobre ella, trabaja en conjunto con ejer2.xml
+ejer3.pdf: archivo que contiene las respuestas al ejercicio 3

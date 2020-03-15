@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<table>
+    <tbody>
+        <tr ord="1">
+            <semana>6</semana>
+            <fecha>14/febrero/2019</fecha>
+            <titulo>Parcial I (temas 1 - 4)</titulo>
+            <valor>15</valor>
+        </tr>
+        <tr ord="2">
+            <semana>6</semana>
+            <fecha>17/febrero/2019</fecha>
+            <titulo>Asignacion practica I (temas 1 - 4).</titulo>
+            <valor>10</valor>
+        </tr>
+        <tr ord="3">
+            <semana>9</semana>
+            <fecha>6/marzo/2019</fecha>
+            <titulo>Parcial II (temas 5 - 8)</titulo>
+            <valor>15</valor>
+        </tr>
+        <tr ord="4">
+            <semana>9</semana>
+            <fecha>14/marzo/2019</fecha>
+            <titulo>Asignacion practica II (temas 5 - 8)</titulo>
+            <valor>10</valor>
+        </tr>
+    </tbody>
+</table>
