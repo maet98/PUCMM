@@ -1,0 +1,5 @@
+ejerc1.scm: contiene los codigos que dan respuesta al ejercicio 1 y los argumentos en un comentario
+
+ejerc2.pro: contiene el codigo que da respuesta al ejercicio 2 y el argumento en un comentario
+
+ejerc3.pdf: contiene la respuesta al ejercicio 3

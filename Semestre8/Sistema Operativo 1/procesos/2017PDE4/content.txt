@@ -1,0 +1,11 @@
+Fuentes modificadas
+Dentro de esta carpeta se encuentran los ficheros modificados para la realizacion de la asignacion PDE4. Estos archivos son: synch.h, synch.c, thread.c, thread.h y timer.c.
+Las rutas para estos archivos dentro del proyecto pintos son:
+./pintos/src/threads/synch.c
+./pintos/src/threads/synch.h
+./pintos/src/threads/thread.c
+./pintos/src/threads/thread.h
+./pintos/src/devices/timer.c
+
+20170200design.pdf
+Incluye el docuemnto de diseno del proyecto.
