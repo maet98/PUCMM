@@ -1,0 +1,17 @@
+
+function theta(Aef, g, h):
+	return Aef * squareroot(2 * g * h)
+
+model rain(hd, hm, Aint, Aef, Qp):
+	settings:
+		external Qp ('pluviometro')
+		augment(h,Qp)
+		caculate(Qd, theta, Aef, g, h)
+		export(h) 
+		export(Qd)
+	while TIME < STOP_TIME:	
+		if h >= hd:
+			reduce(h, Qd)
+		if h == hm:
+			stop('reduce', h, Qd)
+rain(hd, hm, Aint, Aef, Qp) stop 7 days

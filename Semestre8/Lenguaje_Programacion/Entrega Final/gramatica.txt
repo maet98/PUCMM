@@ -1,0 +1,79 @@
+
+function_decl ->	FUNCTION ID(parameters): code {declaration of a function}
+
+model_decl ->	MODEL ID(parameters): model_code {declaration of a model, include TIME and STOP_TIME in the symbol table in the model scope}
+
+model_code -> setting_stmt code {model code}
+
+setting_stmt -> SETTINGS: setting_code{Run once code of the model}
+
+setting_code ->	code {sentences of the settings}
+				|	EXTERNAL ID(LITERAL) '\n' setting_code {external sentence for external variables}
+
+code ->	stmt code {statements}
+		|stmt 	{last statement}
+
+stmt -> loop 	{loop statements}
+		|	cond {if statements}
+		|	assgn {assignment statement}
+		|	func {functions and models call}
+		|	CONTINUE {continue instrucition}
+		|	BREAK {break statement}
+		| RETURN expr  {return statement}
+
+loop -> WHILE expr: code {while loop statement}
+		|	for_loop {for loop statement}
+
+for_loop ->	FOR ID IN ID: {for with ids}
+			|	FOR ID IN RANGE(vallist): {for with range}
+
+parameters ->	ID, parameters {parameters for functions and model}
+				|	ID {last parameter of a function or model}
+
+vallist ->	val, vallist {values for calling a function or model}
+			|	val {las value of a call}
+
+val ->	ids {all posible form of id}
+		|	NUMBER {integer or real const}
+
+cond ->	IF expr : if_code {if stament}
+
+if_code ->	code ELIF expr: if_code {if with ELIF branch}
+			|	code ELSE: code {if with Else branch}
+
+func -> ID(vallist) {fuction calling}
+		|	ID(vallist) STOP NUMBER time {model only call, especifies the value of stop time with the time multiplier}
+
+time -> SECONDS 
+		|	MINUTES
+		|	HOURS
+		|	DAYS
+		|	WEEKS
+		|	MONTHS
+		|	YEARS	
+
+assgn -> ids = expr
+
+ids ->	ID
+		|	ID[val]
+
+expr -> term + expr {adds two elemnts}
+		|	term - expr {subtraction of two elements}
+		|	term
+		|	expr bop expr {boolean operations}
+
+term -> factor * term { first term times second term}
+		|	factor / term {divide two elements}
+		|	factor % term {mod of the first term with the second term}
+		|	factor
+
+factor ->	(expr) 
+			|	val
+			|	ID(vallist)
+
+bop ->	==
+		|	!=
+		|	>
+		|	<
+		|	>=
+		|	<=
