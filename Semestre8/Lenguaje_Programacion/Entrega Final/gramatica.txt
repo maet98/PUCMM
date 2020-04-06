@@ -1,7 +1,7 @@
+ 
+function_decl ->	FUNCTION ID(parameters)':' code {declaration of a function}
 
-function_decl ->	FUNCTION ID(parameters): code {declaration of a function}
-
-model_decl ->	MODEL ID(parameters): model_code {declaration of a model, include TIME and STOP_TIME in the symbol table in the model scope}
+model_decl ->	MODEL ID(parameters)':' model_code {declaration of a model, include TIME and STOP_TIME in the symbol table in the model scope}
 
 model_code ->  code {model code}
 
@@ -17,11 +17,11 @@ stmt -> loop 	{loop statements}
 		|	pluviometro
 		| 	RETURN expr  {return statement}
 
-loop -> WHILE expr: code {while loop statement}
+loop -> WHILE(expr):' code {while loop statement}
 		|	for_loop {for loop statement}
 
-for_loop ->	FOR ID IN ID: {for with ids}
-			|	FOR ID IN RANGE(vallist): {for with range}
+for_loop ->	FOR ID IN ID':' {for with ids}
+			|	FOR ID IN RANGE(vallist)':' {for with range}
 
 parameters ->	ID, parameters {parameters for functions and model}
 				|	ID {last parameter of a function or model}
@@ -32,10 +32,10 @@ vallist ->	val, vallist {values for calling a function or model}
 val ->	ids {all posible form of id}
 		|	NUMBER {integer or real const}
 
-cond ->	IF( expr) : if_code {if stament}
+cond ->	IF( expr) ':' if_code {if stament}
 
-if_code ->	code ELIF expr: if_code {if with ELIF branch}
-			|	code ELSE: code {if with Else branch}
+if_code ->	code ELIF expr':' if_code {if with ELIF branch}
+			|	code ELSE':' code {if with Else branch}
 
 pluviometro -> _PLUVIOMETRO ( coords)
 
