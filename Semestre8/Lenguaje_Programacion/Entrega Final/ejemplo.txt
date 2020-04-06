@@ -7,23 +7,31 @@ function calculateTheta(Aef, h):
 	result = Aef * sqrt(2 * G * h)
 	return result
 
+Qp = pluviometro(latitud, longitud)
 
 #recibe algunas constantes como parametro
 model modeloA(fileName, endDate, Aef, hm, hd,Qp):	
 	T = calculateTheta(Aef,h) #se calculan valores iniciales de Thetha y Qd
-        Qd = calculateQd(T, h)
+	Qd = calculateQd(T, h)
+	flag = False
 
-        while(currentDate < endDate):
-            if(h > hm): # paramos si se cumple que h > hm
-		break
-            write(h , fileName)  #se van almacenando valores de h y Qd en un fichero 
-	    write(Qd, fileName)
-            T = calculateTheta(Aef) # se mantiene el calculo constante de Thetha y Qd
-            Qd = calculateQd(T, h)
-        
-            if(h == hd):
-                decrease(h, Qd) #se produce descarga en funcion de Qd si h == hd
+	while(currentDate < endDate):
+		if(h==hd):
+			decrease(h, Qd)
+			flag = True
+			
+		if(h > hm && bandera): 
+			decrease(h, Qd)
+		
+		if(h == hm && flag):
+			flag = True
+			decrease(h, Qd) #se produce descarga en funcion de Qd si h == hd
 
-            increase(h, Qp) #mantenemos el incremento constante de h en funcion de Qp
+		write(h , fileName)  #se van almacenando valores de h y Qd en un fichero 
+		write(Qd, fileName)
+		T = calculateTheta(Aef) # se mantiene el calculo constante de Thetha y Qd
+		Qd = calculateQd(T, h)
+	
+		increase(h, Qp) #mantenemos el incremento constante de h en funcion de Qp
 
 modeloA(fileName, endDate, Aef, hm, hd, Qp) #llamada a la funcion
