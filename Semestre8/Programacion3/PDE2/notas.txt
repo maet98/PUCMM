@@ -1,0 +1,27 @@
+1.if guarded
+
+Atributos:
+- segmento de codigo generado 
+
+
+2.
+Se tendria que hacer una doble pasada para poder realizar bien este procedimiento. Ya que una variable que
+no fue declarada en un procedimiento puede que haya sido declarada en otro que llame a este. Entonces no se
+puede afirmar declaracion uso hasta que no se pase de nuevo recorriendo el arbol de llamadas y revisando
+en las que no fueron declaradas 
+una estructura de grafos donde una llamada a una funcion desde otra significaria, sea A la funciona 
+que llama a la funcion B. Entonces seria A -> B.
+
+la estructura de grafo seria un lista adjacente
+map<string,vector<string> >listaAdj;
+
+El string seria el id de un procedures.
+El vector de string es los procedimientos que son llamados.
+
+
+map<string,vector<variables> > declaradas,noDeclaradas;
+
+El string seria el id del procedures.
+
+Si una variable ha sido declarada en un procedimientos esta se insertaria en el mapa de declaradas.
+En el caso contrario se insertaria en las que no fueron declaradas.
