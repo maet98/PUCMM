@@ -7,6 +7,6 @@ sobre(d, e).
 bajo(X, Y):- sobre(Y,X).
 
 encima(X,Y) :- sobre(X,Y).
-encima(X,Y) :- sobre(x,Z),encima(Z,Y).
+encima(X,Y) :- sobre(X,Z),encima(Z,Y).
 
 libre(X):- not(sobre(_,X)).
