@@ -1,0 +1,8 @@
+travelFromTo(nancy,feyming).
+true.
+
+travelFromTo(forbach,fahlquemont).
+false.
+
+travelFromTo(nancy,dudweiler).
+true.

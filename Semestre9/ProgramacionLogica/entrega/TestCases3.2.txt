@@ -1,0 +1,8 @@
+in(katarina, irina).
+true.
+
+in(olga,katarina).
+false.
+
+in(irina,olga).
+false.
