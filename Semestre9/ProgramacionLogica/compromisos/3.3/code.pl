@@ -5,7 +5,7 @@ rev(L,R):- accRev(L,[],R).
 
 % append/3
 append([],L,L).
-append([H|T],L2,[H|L3])  :-  append(T,L2,L3).
+ppend([H|T],L2,[H|L3])  :-  append(T,L2,L3).
 
 % 6.2
 palindrome(List) :- rev(List,List).
