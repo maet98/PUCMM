@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "phonic-altar-238300",
+  "private_key_id": "f84e2151b52b37d382ace81120d699b9ff453a2a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCnWZl1h/jFYofm\nd6dbtCHUDYLugvqK/p6qD/tEqB/2zAlRwfSSLFK1BLZmRjOloSEMGzYPpYqPm6H2\n6ew9gqDTnEeuHKz0hj/h/CrtKIIwIqtixgLeDEpxozr5VnDFxfFl3UWdpB94yi35\ngUUv6PZqjgPUrBzZBelVBdcLBm4Unj5t3xKcmK9vJXmfFAh0vewyb9QSBOiTppCR\nkQh9uj7iM0g1N7cU+TZKSmgufj6cwJ263CnMGSa2D2x2lyq7KRl3WoaJQwcMQTkG\nHFenV30HV/iuPw4qMPamAgEk3goNyAfXwFvx0xqHY6H1eTWGKHezSrqd3mbb9bxT\nWW/WWu/PAgMBAAECggEAP3XGr78EIzWd+1Ncb3X7bgJBqFia0aKEYFD3I63tkRUG\nY659JAESy/ohgN8WLrTPZ1vaQEyyIosN/CfwodKrUhNtSyUsoP1XtEZ/sLcvxzke\nbLJR3AolILqZXnvc/+J0DADAqWrXVGK21Gqk5eodp4J7CWbK+bE4Ljmstk2V6NML\ndcOwuA38mn5b9wRvWKbpPrj7zGPzdfbnIYDY6FQL7IjjCmcWZvKwwoHCfQDgX3xf\nxe9nE/CZYc0o8OjDII89EmQGp74V6f2bDcpOYHrfxCbuGiYzay4Hkb31pav8lQYt\n7unaM1ait5NWOvOPHs3U2onI2q2kQ2Jp2i0RdSubgQKBgQDkRqAHWnehvoNhpXmy\nOZYSXt1bxRGgnplHn9trgHIDd6dSbxSGOIFqAR4y+jVLzuZDALpx2AV/HmuhiEDs\nzf31/DXizBV3VNGqlRSLz8kEyJhmT4I8VXv+n84WmK/sOtKhu2tptSUPKAC0IdwX\nLpIg/VhBr1gSKTCPLWXnoxRgUQKBgQC7rLbr/La9lafBJOdyPRGp47N9UDVABr7H\nuXde130DAIVKFaOdfre/3wFi/ppP4UsjHoNR+wCa1en510lNsaVKm6RHUinrGyd6\n4DnQ7C/SXj3WrNDerBsq30pg7iVwwdScfRSypaiqr3c5VHCjXYLFN0JU9LiHNCoH\n5NGqipNmHwKBgQDW525MveyWRwbk7KXvFauky85VUOfRcL4Y4fPt9tRfU0wgnRaT\nbarYIwlNMKTwI24/cfYUqywxinAFeIK27Q7Df5czVrJ2z1E76HGZVhqG+FoRJ5US\nO+ApzER2nXQxTwdw30K2F6U16ZEQBDhxUpSbniZyYCLnpgNjJ3giZDMQoQKBgCdr\nwgiTzrbH5rLVU6BVX451+8/It0a5o/1D4eUUEng89cJ4BSQh5+rvptTqcfNxeVzp\nHeBsftYHNNx78jPVqsifJMSuZ4uw6nwO+VX/JpRjo02ig0UilZpNyMvPeiHTNRuh\n0mUsEt+3d62dJQPLsppGXzKFLPWJaYK696eA8DE1AoGAJrHCIwPaOI2mml9rdf5S\nosaAyWGBpd3JodadpfgyOregFFge53vENkFU3a2MOGeb5D80XJLdVYuHkAeQn8Jj\nYt0U1UgLlzas8z27rmfPlh7Q2jK/vfp4DKNii24PAVJSp+QyCSKNrf5kKaYJioQc\nGFzwasbi8EcLeJy7NIwHulY=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-gzdvt@phonic-altar-238300.iam.gserviceaccount.com",
+  "client_id": "112054168779127360204",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-gzdvt%40phonic-altar-238300.iam.gserviceaccount.com"
+}
