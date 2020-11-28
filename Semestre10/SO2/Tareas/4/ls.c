@@ -16,10 +16,8 @@ void strmode(mode_t mode, char * buf) {
   buf[9] = '\0';
 }
 
-char* timeTostring(time_t *time) {
-    char buff[20];
+void timeTostring(time_t *time, char* buff) {
     strftime(buff, 20, "%Y-%m-%d %H:%M:%S", localtime(time));
-    return buff;
 }
 
 typedef struct {
@@ -73,23 +71,20 @@ void ls(Flag flags,char* dirname) {
             if(namelist[n]->d_name[0] == '.' && !flags.all) continue;
             if(flags.allInfo) {
                 struct stat actual;
-                char path[100];
+                char path[1000];
                 sprintf(path,"%s/%s",dirname,namelist[n]->d_name);
                 stat(path,&actual);
-                char buf2[10];
+                char buf2[20];
                 strmode(actual.st_mode,buf2);
                 printf("%s ", buf2);
                 struct passwd *pws;
                 pws = getpwuid(actual.st_uid);
                 printf("%s ", pws->pw_name);
                 printf("%s ", pws->pw_name);
-                char buff[3][20];
+                char buff[30];
                 printf("%ld ",actual.st_size);
-                strftime(buff[2], 20, "%Y-%m-%d %H:%M:%S", localtime(&actual.st_ctim));
-                int i;
-                for(i = 0;i < 3;i++) {
-                    printf("%s ", buff[i]);
-                }
+                strftime(buff, 30, "%b %d %H:%M", localtime(&actual.st_ctim));
+                printf("%s ", buff);
             }
             printf("%s\n",namelist[n]->d_name);
             free(namelist[n]);
