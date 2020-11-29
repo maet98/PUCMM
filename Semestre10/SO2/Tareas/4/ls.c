@@ -25,6 +25,7 @@ typedef struct {
     short allInfo;
 } Flag;
 
+
 Flag init() {
     Flag flag;
     flag.all = 0;
@@ -41,6 +42,13 @@ short validateFlags(char **arr, int n, Flag* flags, char* dir) {
                 flags->all = 1;
             } else if(arr[i][1] == 'l'){
                 flags->allInfo = 1;
+            } else if(arr[i][1]) {
+                printf("ls: listar todo los archivos y directorio en el directorio especificado\n");
+                printf("Por defecto es el directorio actual.\n");
+                printf("-h\t Para mostar esta informacion.\n");
+                printf("-a\t Muestra todos hasta los ocultos.\n");
+                printf("-l\t Muestra mas informacion sobre los archivos y directorios.\n");
+                exit(EXIT_SUCCESS);
             } else {
                 printf("%s este flag no esta definido\n",arr[i]);
                 return 0;

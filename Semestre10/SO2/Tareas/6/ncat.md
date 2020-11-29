@@ -2,7 +2,7 @@
 ### 2017-0200
 
 
-<div align="center" style="font-size:40px">Ncat</div>
+<div align="center" style="font-size:40px">Ncat: "La navaja suiza"</div>
 
 ### a. Ejecutar una aplicacion/mandato en una maquina remota.
 
@@ -22,6 +22,7 @@ ncat 10.0.0.3 6666
 ncat -l 6666 -e /bin/sh
 ```
 ![](./img/2.png)
+
 ![](./img/3.png)
 
 ### c. Enviar archivo de una maquina a otra.
@@ -39,7 +40,7 @@ nc -l 1499 > salida.out
 nc 192.168.0.103 1499 < entrada
 ```
 
-![](./img/4.png)
+![Imagen del enviador de archivo](./img/4.png)
 
 ### d. "Escanear" puertos de maquina atacada.
 
@@ -59,9 +60,12 @@ ncat -l 1499
 ncat 192.168.0.103 1499
 ```
 
+![](./img/7.png)
+
 ### f. Comunicarse con un servidor: bajar una pagina web
 
 ```bash
 printf 'GET / HTTP/1.1\r\nHost: github.com\r\n\r\n' | ncat --ssl github.com 443
 ```
+**Nota:**
 La salida va estar adjunta con este documento por que es muy largo el html.
