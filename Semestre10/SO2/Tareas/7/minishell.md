@@ -54,9 +54,9 @@ int comando_pwd(char **arg){
 ```
 
 ### mv
-###
 
 ![](./img/2.png)
 
-### rm
-###
+### rmfile
+
+### cat

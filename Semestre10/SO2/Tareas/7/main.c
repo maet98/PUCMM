@@ -48,6 +48,7 @@ int comando_pwd(char **arg);
 int comando_rmdir(char **arg);
 int comando_rmfile(char **arg);
 int comando_date(char **arg);
+int comando_touch(char **arg);
 
 
 int (*realizar_comando[]) (char **) = { 
@@ -65,7 +66,8 @@ int (*realizar_comando[]) (char **) = {
   &comando_rmfile,
   &comando_mv,
   &comando_cat,
-  &comando_date
+  &comando_date,
+  &comando_touch
 }; 
 
 char *comandos[] = {
@@ -83,7 +85,8 @@ char *comandos[] = {
   "rmfile",
   "mv",
   "cat",
-  "date"
+  "date",
+  "touch"
 };
 
 
@@ -201,6 +204,21 @@ int comando_cd(char **arg) {
         if (chdir(arg[1]) != 0) {
           printf("Error: Fallo el comando 'cd'\n");
         }
+    }
+
+    return 0;
+}
+
+
+int comando_touch(char **arg) {
+ /* Uso:    cd [/ruta/a/cambiar/]      
+    Limitaciones: -Funciona unicamente si recibe un argumento.  */
+
+    if (arg[1] == NULL) {
+        printf("Error: Cantidad insuficiente de argumentos\n"); 
+    } else {
+        FILE* out = fopen(arg[1],"w");
+        fclose(out);
     }
 
     return 0;

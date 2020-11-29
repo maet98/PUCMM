@@ -54,6 +54,7 @@ typedef struct {
 ![](./img/1.png)
 
 **ls -h**
+
 ![](./img/2.png)
 
 **ls -a**
@@ -67,4 +68,5 @@ typedef struct {
 
 
 **ls -l -a**
+
 ![](./img/6.png)
