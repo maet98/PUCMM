@@ -1,0 +1,11 @@
+@relation cliente
+@attribute edad numeric
+@attribute sexo {male, female}
+@attribute sueldo_mensual numeric
+
+@data
+30, male, 20000
+40, female, 10000
+42, male, 40000
+33, female, 20000
+50, male, 80000
